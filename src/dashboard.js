@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Dashboard = (user) => (
+const Dashboard = () => (
 
     <div>
       <h1>
           This is the Dashboard<br/>
-          You are {user}
+          You are logged in
       </h1>
     </div>
 );

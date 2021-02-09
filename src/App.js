@@ -57,7 +57,7 @@ function App() {
       <Switch>
         <Route path="/dashboard">
           <AmplifyAuthenticator>
-            <Dashboard user={user} />
+            <Dashboard/>
           </AmplifyAuthenticator>  
         </Route>
         <Route path="/">
