@@ -1,8 +1,6 @@
 import React from 'react';
 
-function Dashboard({user}) {
-  if (!user) return (<div>Please log in to see the dashboard</div> )  
-  return(
+const Dashboard = (user) => (
 
     <div>
       <h1>
@@ -10,8 +8,7 @@ function Dashboard({user}) {
           You are {user}
       </h1>
     </div>
-)
-};
+);
 
 
 export default Dashboard;

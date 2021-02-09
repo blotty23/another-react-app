@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {AmplifyAuthenticator, AmplifySignOut} from "@aws-amplify/ui-react";
 import Amplify, { Auth, Hub } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import {
@@ -7,7 +8,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
 import Dashboard from './dashboard.js'
 
 Amplify.configure(awsconfig);
@@ -52,13 +52,13 @@ function App() {
     
   <Router>
     <div>
-      
-
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
       <Switch>
         <Route path="/dashboard">
-          <Dashboard user={user} />
+          <AmplifyAuthenticator>
+            <Dashboard user={user} />
+          </AmplifyAuthenticator>  
         </Route>
         <Route path="/">
           <Home />
